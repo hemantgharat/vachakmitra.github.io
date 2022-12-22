@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="icon" href="./static/images/open-book.png" />
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+  <script type="text/javascript" src="./static/js/voice_client_with_audio_worklet.js"></script>
+  <title>Reading Aplication</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Reading Aplication</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  {% comment %} <div style="display: flex;justify-content: center; align-items: center;">
+    <h1 id="dt" style="font-size:xx-large ;"></h1> {% endcomment %}
+
+    <div id="main"><br>
+      <button id="listen" class="btn btn-outline-success" style="margin-left: 20px;">Start Reading</button>
+      <button id="stopListening" class="btn btn-outline-warning" style="margin-right: 20px; float:right;">Stop
+        Reading</button>
+    </div>
+  </div><br><br>
+
+  <div id="messages" style="display: flex;justify-content: center; align-items: center; margin-top: 10%;">
+    <h1 id="q" style="font-size:xx-large ;"></h1>
+
+    <div id="SampleData" class="d-flex align-items-center" style="font-size: xxx-large; font-weight: bold;">
+
+    </div>
+  </div>
+
+</body>
+<!-- <script>
+  async function getMedia(constraints) {
+    let stream = null;
+    try {
+      stream = await navigator.mediaDevices.getUserMedia(constraints);
+      console.log(stream)
+    } catch(err) {
+     document.write(err)
+    }
+  }
+  
+  getMedia({ audio: true, video: false })
+
+</script> -->
+
+
+<!-- <script>
+  let canvas = document.getElementById("SampleData");
+  let SampleData = "One Two Three Four";
+  let sData = SampleData.split(" ");
+
+  for (let [index, _s] of sData.entries()) {
+    let p = document.createElement("p");
+    p.innerText = _s;
+    p.className = "px-2";
+    p.id = index;
+    canvas.appendChild(p);
+  }
+
+  let outputValue = "One Two".split(" ");
+
+  for (let i in sData) {
+    for (let j in outputValue) {
+      if (sData[i] == outputValue[j]) {
+        //document.getElementById('"',sData[i], '"').style.color =   "green";
+        document.getElementById("0").style.color = "green";
+      }
+      else{
+        //document.getElementById("0").style.color = "green";
+        document.getElementById("1").style.color = "red";
+        document.getElementById("1").style.textDecoration = "underline";
+      }
+    }
+  }
+</script>  -->
+
+</html>
